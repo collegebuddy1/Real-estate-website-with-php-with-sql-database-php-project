@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Dashboard Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this layout -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">BLUESKY</a>
+  <input class="form-control form-control-primary w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+<br>
+<br>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="http://localhost:8080/finalweb/propinsert.php">
+              <span data-feather="home"></span>
+              Add propert detail <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/finalweb/disp.php">
+              <span data-feather="shopping-cart"></span>
+             Customers data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/properties.html">
+              <span data-feather="users"></span>
+              Properties
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/karachi.html">
+              <span data-feather="bar-chart-2"></span>
+              karachi properties
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/lahore.html">
+              <span data-feather="layers"></span>
+               Lahore properties
+            </a>
+          </li>
+        </ul>
+
+        
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/isl.html">
+              <span data-feather="file-text"></span>
+              Islamabad properties
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/multan.html">
+              <span data-feather="file-text"></span>
+              Multan properties
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/xampp/htdocs/finalweb/pesha.html">
+              <span data-feather="file-text"></span>
+              Peshawar properties
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1  class="h2" style="text-align:center;">DASHBOARD</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-primary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-primary">View data</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+      <h2>Customers Detail</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Basit</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>12345</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ali Raza</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>536373</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Haseeb</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>532133</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Obaid</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>123124</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Hassan</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>13312</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Wahaj</td>
+              <td>Multan</td>
+              <td>Pakistan</td>
+              <td>3322211</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Muneeb</td>
+              <td>Pindi</td>
+              <td>Pakistan</td>
+              <td>2242452</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Naveed</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>1135343</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Raja</td>
+              <td>karachi</td>
+              <td>Pakistan</td>
+              <td>1422</td>
+            </tr>
+            <tr>
+				<td>10</td>
+              <td>Abid</td>
+              <td>Sydney</td>
+              <td>Austria</td>
+              <td>588432</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="dashboard.js"></script></body>
+</html>
